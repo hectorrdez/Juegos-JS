@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados</title>
+    <style>
+        table{font-size: 25px;
+            margin: 150px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table><caption>Dados:</caption>
+        <tr>
+            <td><img id="img1" src="" alt=""></td>
+            <td><img id="img2" src="" alt=""></td>
+            <td><img id="img3" src="" alt=""></td>
+            <td><img id="img4" src="" alt=""></td>
+            <td><img id="img5" src="" alt=""></td>
+        </tr>
+        <tr>
+            <td id="d1"></td>
+            <td id="d2"></td>
+            <td id="d3"></td>
+            <td id="d4"></td>
+            <td id="d5"></td>
+        </tr>
+    </table>
+
+    <script>
+       var dado1 = parseInt(Math.random()*6)+1;
+       document.getElementById("d1").innerHTML = dado1
+       document.getElementById("img1").src= dado1+".jpg"
+
+       var dado2 = parseInt(Math.random()*6)+1;
+       document.getElementById("d2").innerHTML = dado2
+       document.getElementById("img2").src= dado2+".jpg"
+
+       var dado3 = parseInt(Math.random()*6)+1;
+       document.getElementById("d3").innerHTML = dado3
+       document.getElementById("img3").src= dado3+".jpg"
+
+       var dado4 = parseInt(Math.random()*6)+1;
+       document.getElementById("d4").innerHTML = dado4
+       document.getElementById("img4").src= dado4+".jpg"
+
+       var dado5 = parseInt(Math.random()*6)+1;
+       document.getElementById("d5").innerHTML = dado5
+       document.getElementById("img5").src= dado5+".jpg"
+
+    </script>
+</body>
+</html>
