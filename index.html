@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,60 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
-
+        Juego de Dados
     </header>
+    <aside>
+        <table border="1">
+            <caption>Jugadores</caption>
+            <tr>
+                <th id="p1"> Jugador 1</th>
+                <td id="p1ronda1"></td>
+                <td id="p1ronda2"></td>
+                <td id="p1ronda3"></td>
+                <td id="p1ronda4"></td>
+                <td id="p1ronda5"></td>
+                <td id="p1ronda6"></td>
+                <td id="total1"></td>
+            </tr>
+            <tr>
+                <th id="p2"> Jugador 2</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="total2"></td>
+            </tr>
+        </table>
+        <script src="players.js"></script>
+    </aside>
+    <section>
+        <table>
+            <tr>
+                <td><img id="img1" src="" alt="" ></td>
+                <td><img id="img2" src="" alt="" ></td>
+                <td><img id="img3" src="" alt="" ></td>
+                <td><img id="img4" src="" alt="" ></td>
+                <td><img id="img5" src="" alt="" ></td>
+            </tr>
+            <tr>
+                <td id="d1"></td>
+                <td id="d2"></td>
+                <td id="d3"></td>
+                <td id="d4"></td>
+                <td id="d5"></td>
+            </tr>
+        </table>
+        <button id="resetRound" onclick="index.js">Siguiente</button>
+        <script src="index.js"></script>
+    </section>
+    <footer>
+        ©Todos los derechos reservados 2022
+    </footer>
 </body>
+
 </html>

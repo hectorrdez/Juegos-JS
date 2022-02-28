@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+header {
+    position: relative;
+    top: 0%;
+    width: 100%;
+    padding: 20px;
+    background-color: blueviolet;
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+}
+aside {
+    position: relative;
+    width: fit-content;
+    height: auto;
+    border: 1px solid black;
+}
+section {
+    position: relative;
+    right: 0%;
+    left: 250px;
+    background-color: green;
+}
+section table {
+    display: flex;
+    justify-content: center;
+}
+footer {
+    position: relative;
+    bottom: 0%;
+    width: 100%;
+    padding: 10px;
+    background-color: grey;
+    text-align: center;
+    color: white;
+}
