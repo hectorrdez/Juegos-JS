@@ -8,18 +8,41 @@
     <title>Juego de los dados</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    
+
 </head>
 
 <body>
     <header>
         Juego de Dados
     </header>
+    
+    <section>
+        <span id="anuncios"><span id="jugador"></span></span>
+        <div class="dados">
+            <table>
+                <tr>
+                    <td><img id="img1" src="" alt=""></td>
+                    <td><img id="img2" src="" alt=""></td>
+                    <td><img id="img3" src="" alt=""></td>
+                    <td><img id="img4" src="" alt=""></td>
+                    <td><img id="img5" src="" alt=""></td>
+                </tr>
+                <tr>
+                    <td id="d1"></td>
+                    <td id="d2"></td>
+                    <td id="d3"></td>
+                    <td id="d4"></td>
+                    <td id="d5"></td>
+                </tr>
+            </table>
+        </div>
+        <button id="button" onclick="tirarDados()">Comenzar</button>
+    </section>
     <aside>
-        <table border="1">
+        <table border="0">
             <caption>Jugadores</caption>
             <tr>
-                <th id="p1"> Jugador 1</th>
+                <th id="p1" class="player1"> Jugador 1</th>
                 <td id="ronda1">0</td>
                 <td id="ronda3">0</td>
                 <td id="ronda5">0</td>
@@ -29,7 +52,7 @@
                 <th id="total1">0</th>
             </tr>
             <tr>
-                <th id="p2"> Jugador 2</th>
+                <th id="p2" class="player2"> Jugador 2</th>
                 <td id="ronda2">0</td>
                 <td id="ronda4">0</td>
                 <td id="ronda6">0</td>
@@ -40,30 +63,10 @@
             </tr>
         </table>
     </aside>
-    <section>
-        <span id="anuncios"></span>
-        <table>
-            <tr>
-                <td><img id="img1" src="" alt="" ></td>
-                <td><img id="img2" src="" alt="" ></td>
-                <td><img id="img3" src="" alt="" ></td>
-                <td><img id="img4" src="" alt="" ></td>
-                <td><img id="img5" src="" alt="" ></td>
-            </tr>
-            <tr>
-                <td id="d1"></td>
-                <td id="d2"></td>
-                <td id="d3"></td>
-                <td id="d4"></td>
-                <td id="d5"></td>
-            </tr>
-        </table>
-        <button id="resetRound" onclick="tirarDados()">Siguiente</button>
-        <script src="index.js"></script>
-    </section>
     <footer>
         ©Todos los derechos reservados 2022
     </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>
