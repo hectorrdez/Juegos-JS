@@ -16,8 +16,8 @@ let inicio = false;
 
 function tirarDados() {
     if (ronda < 13 && ronda > 0) {
-        if (ronda % 2 != 0) document.getElementById("anuncios").innerHTML = "Te toca " + player1;
-        if (ronda % 2 == 0) document.getElementById("anuncios").innerHTML = "Te toca " + player2;
+        if (ronda % 2 != 0) document.getElementById("anuncios").innerHTML = "Te toca "+"<span class=player1>"+player1+"</span>";
+        if (ronda % 2 == 0) document.getElementById("anuncios").innerHTML = "Te toca "+"<span class=player2>"+player2+"</span>";
 
         let dado1 = parseInt(Math.random() * 6) + 1;
         let dado2 = parseInt(Math.random() * 6) + 1;
@@ -47,16 +47,16 @@ function tirarDados() {
     }
     if (ronda == 13 ) {
         if (total1Score > total2Score) {
-            document.getElementById("anuncios").innerHTML = "has ganado "+player1;
+            document.getElementById("anuncios").innerHTML = "Has ganado <span class=player1>"+player1+"</span>";
         } else {
-            document.getElementById("anuncios").innerHTML = "has ganado "+player2;
+            document.getElementById("anuncios").innerHTML = "Has ganado <span class=player2>"+player2+"</span>";
         }
         for (let i = 1; i <= 12; i++) document.getElementById("ronda" + i).innerHTML = 0;
         document.getElementById("total1").innerHTML = 0;
         document.getElementById("total2").innerHTML = 0;
         total1Score = 0;
         total2Score = 0;
-        console.log("MAXIMO DE RONDA");
+        console.log("MAXIMO DE RONDA"); 
         ronda = 0;
     }
     if (ronda == 0) {
