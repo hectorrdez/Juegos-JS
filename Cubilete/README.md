@@ -1,1 +1,1 @@
-# solitario
+# Cubilete
