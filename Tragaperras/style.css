@@ -46,6 +46,7 @@ section div.gameDisplay div.display img{
     max-width: 100%;
     min-height: 150px;
     max-height: 100%;
+    padding: 0 0 10px 0;
 }
 section > div.status{
     min-height: 100px;
