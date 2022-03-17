@@ -1,4 +1,8 @@
 
+let money = parseInt(Math.random(1000 - 200)*1000)
+let moneyCounter = document.querySelector(".money");
+moneyCounter.innerText = money;
+
 let img=document.querySelectorAll('img');
 let index=new Array(3);
 let timer=setInterval(changeImg,100);
