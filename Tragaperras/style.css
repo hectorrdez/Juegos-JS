@@ -8,7 +8,8 @@ body{
     width: 50%;
 }
 header{
-    height: 200px;
+    height: auto;
+    padding: 10px;
     border: 1px solid black;
 }
 header > nav{
@@ -29,13 +30,27 @@ section > div.gameDisplay{
     align-items: center;
     justify-content: space-around;
     border: 1px solid black;
+    background-color: rgb(36, 35, 35);
 }
 section > div.gameDisplay > div.display{
     height: 300px;
     width: 200px;
     border: 1px solid black;
+    background-color: white;
+}
+section > div.status{
+    min-height: 100px;
+    max-height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+section > div.status > div.money{
+    height: 200px;
+    width: 500px;
+    border: 1px solid black;
 }
 footer{
-    height: 100px;
+    height: auto;
     border: 1px solid black;
 }
