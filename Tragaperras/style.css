@@ -6,6 +6,8 @@ body{
     background-image: url("background.jpg");
     height: 100%;
     width: 50%;
+    border-left: 20px double rgb(201, 0, 134);
+    border-right: 20px double rgb(201, 0, 134);
 }
 header{
     height: auto;
