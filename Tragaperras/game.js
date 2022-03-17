@@ -8,11 +8,11 @@ for(i=0;i<index.length;i++){
     img[i].src="img/"+index[i]+".png";
 }
 
-
 function rotateImg(){
     for(i=0;i<img.length;i++){
         index[i]++;
         if (index[i]>15) index[i]=0;
+        let player = img[i].animate([{ transform: "translate(0px, 50px)" }], 100);
         img[i].src="img/"+index[i]+".png";
     }
 }
