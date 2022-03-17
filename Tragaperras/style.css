@@ -8,11 +8,34 @@ body{
     width: 50%;
 }
 header{
-    height: 20%;
+    height: 200px;
+    border: 1px solid black;
+}
+header > nav{
+    border: 1px solid black;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
 }
 section{
     height: auto;
+    border: 1px solid black;
+}
+section > div.gameDisplay{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+}
+section > div.gameDisplay > div.display{
+    height: 300px;
+    width: 200px;
+    border: 1px solid black;
 }
 footer{
-    height: 200px;
+    height: 100px;
+    border: 1px solid black;
 }
