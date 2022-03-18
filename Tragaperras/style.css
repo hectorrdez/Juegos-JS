@@ -2,24 +2,47 @@
     box-sizing: border-box;
 }
 body{
+    margin: 0;
+    background-image: url("background.webp");
+}
+main{
     margin: auto;
-    background-image: url("background.jpg");
-    height: 100%;
+    height: 100vh;
     width: 50%;
-    border-left: 20px double rgb(201, 0, 134);
-    border-right: 20px double rgb(201, 0, 134);
+    border-left: 20px double red;
+    border-right: 20px double red;
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: block;
+}
+div.loading{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+div.loading > img{
+    height: 300px;
+    width: 300px;
 }
 header{
     height: auto;
     padding: 10px;
     border: 1px solid black;
-    background-color: rgb(211, 0, 176);
+    background-color: red;
 }
 header h1{
-    font-size: xx-large;
+    font-size: 4em;
+    text-align:center;
+    text-transform: uppercase;
+    font-weight:bolder;
+    font-family:Arial, Helvetica, sans-serif;
 }
 header > nav{
-    border: 1px solid black;
+    border: 3px solid white;
     margin: auto;
     border-radius: 10px;
     display: flex;
@@ -35,12 +58,12 @@ section > div.gameDisplay{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid black;
+    border: 3px solid rgb(250, 250, 250);
     background-color: rgb(36, 35, 35);
 }
 section > div.gameDisplay > div.display{
     height: 100%;
-    width: 30%;
+    width: 40%;
     border: 1px solid black;
     background-color: white;
     margin: auto;
@@ -50,29 +73,44 @@ section > div.gameDisplay > div.display{
 }
 section > div.gameDisplay > div.display > div.subDisplay{
     height: 100%;
-    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    filter: blur(0.1em);
 }
 section > div.gameDisplay > div.display > div.mainDisplay{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 100%;
     grid-row: 2;
     margin: auto;
 }
 section > div.gameDisplay > div.display > div.displaySub1{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     grid-row: 1;
+    background: -prefix-linear-gradient(to bottom, black, white);
+    background: linear-gradient(to bottom, black, white);
+    transform: rotateX(45deg);
 }
 section > div.gameDisplay > div.display > div.displaySub2{
     grid-row: 3;
-    border:1px solid black;
+    background: -prefix-linear-gradient(to top, black, white);
+    background: linear-gradient(to top, black, white);
+    transform: rotateX(45deg);
+    /* transform: skew(-10deg,0deg); */
+    /* border:1px solid black; */
 }
 section > div.gameDisplay > div.display > div.mainDisplay > img{
-    content: url("img/1.png");
+    /* content: url("img/1.png"); */
     height: 120px;
 }
 section > div.gameDisplay > div.display > div.subDisplay > img{
-    content: url("img/0.png");
-    height: 75px;
+    /* content: url("img/0.png"); */
+    height: 90px;
+    opacity: 0.5;
+}
+.blur{
+    filter: blur(0.1em);
 }
 section > div.status{
     min-height: 100px;
@@ -80,18 +118,34 @@ section > div.status{
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    background-color: rgb(29, 28, 28);
 }
 section > div.status > div.money{
-    height: 200px;
-    width: 500px;
-    border: 1px solid black;
+    height: auto;
+    padding: 5px 10px;
+    width: auto;
+    border: 3px solid white;
+    border-radius: 10%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section > div.status > div.money > img{
+    height: 75px;
+}
+section > div.status button{
+    transform: rotate(90deg);
 }
 footer{
-    height: auto;
+    min-height: 200px;
     border: 1px solid black;
+    background-color: red;
 }
 nav > button{
-    background-color: yellowgreen;
+    background-color: rgb(107, 16, 182);
+    border-radius: 10px;
+    border: 4px solid black;
     color: white;
     font-size: large;
     border: 0;
