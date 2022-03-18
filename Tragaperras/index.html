@@ -6,56 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jugar</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
 </head>
 <body>
-    <div class="loading"></div>
     <div class="notificationsDisplay"></div>
-    <header>
-        <h1>La tragaperras</h1>
-        <nav>
-            <button class="sound">Sonido <span class="activate">On</span>/ <span class="desactivate">Off</span> </button>
-            <button class="resetGame">Resetear Juego</button>
-            <button class="effects">Efectos</button>
-        </nav>
-    </header>
-    <section>
-        <div class="gameDisplay">
-            <div class="display1 display">
-                <div class="displaySub1 subDisplay"><img class="sub"></div>
-                <div class="displayMain1 mainDisplay"><img class="main"></div>
-                <div class="displaySub2 subDisplay"><img class="sub"></div> 
+    <main>
+        <header>
+            <nav>
+                <button class="sound">Sonido <span class="activate">On</span>/ <span class="desactivate">Off</span> </button>
+                <button class="resetGame">Resetear Juego</button>
+                <button class="effects">Efectos</button>
+            </nav>
+        </header>
+        <section>
+            <div class="gameDisplay">
+                <div class="display1 display">
+                    <div class="displaySub1 subDisplay"><img class="sub"></div>
+                    <div class="displayMain1 mainDisplay"><img class="main blur"></div>
+                    <div class="displaySub2 subDisplay"><img class="sub"></div> 
+                </div>
+                <div class="display2 display">
+                    <div class="displaySub1 subDisplay"><img class="sub"></div>
+                    <div class="displayMain2 mainDisplay"><img class="main blur"></div>
+                    <div class="displaySub2 subDisplay"><img class="sub"></div> 
+                </div>
+                <div class="display3 display">
+                    <div class="displaySub1 subDisplay"><img class="sub"></div>
+                    <div class="displayMain3 mainDisplay"><img class="main blur"></div>
+                    <div class="displaySub2 subDisplay"><img class="sub"></div> 
+                </div>
             </div>
-            <div class="display2 display">
-                <div class="displaySub1 subDisplay"><img class="sub"></div>
-                <div class="displayMain2 mainDisplay"><img class="main"></div>
-                <div class="displaySub2 subDisplay"><img class="sub"></div> 
+            <div class="status">
+                <div class="money">
+                    <img src="img/7seg/0.png" alt="" class="digit1">
+                    <img src="img/7seg/0.png" alt="" class="digit2">
+                    <img src="img/7seg/0.png" alt="" class="digit3">
+                    <img src="img/7seg/0.png" alt="" class="digit4">
+                    <img src="img/7seg/0.png" alt="" class="digit5">
+                    <img src="img/7seg/0.png" alt="" class="digit6">
+                </div>
+                <div class="controls">
+                    <button class="pulse">PULSE</button>
+                </div>
             </div>
-            <div class="display3 display">
-                <div class="displaySub1 subDisplay"><img class="sub"></div>
-                <div class="displayMain3 mainDisplay"><img class="main"></div>
-                <div class="displaySub2 subDisplay"><img class="sub"></div> 
-            </div>
-        </div>
-        <div class="status">
-            <div class="money">
-                <img src="" alt="" class="digit1">
-                <img src="" alt="" class="digit2">
-                <img src="" alt="" class="digit3">
-                <img src="" alt="" class="digit4">
-                <img src="" alt="" class="digit5">
-                <img src="" alt="" class="digit6">
-                <img src="" alt="" class="digit7">
-                <img src="" alt="" class="digit8">
-                <img src="" alt="" class="digit9">
-                <img src="" alt="" class="digit10">
-            </div>
-            <div class="controls">
-                <button class="pulse">PULSE</button>
-            </div>
-        </div>
-    </section>
-    <footer></footer>
+        </section>
+        <footer></footer>
+    </main>
+    <audio src="" id="ambience" autoplay></audio>
+    <div class="loading show"><img src="loading.png" alt="" class="loaderIcon"></div>
+    <script src="main.js"></script>
 </body>
 <script src="game.js"></script>
 </html>
