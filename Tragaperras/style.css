@@ -39,19 +39,40 @@ section > div.gameDisplay{
     background-color: rgb(36, 35, 35);
 }
 section > div.gameDisplay > div.display{
-    height: 300px;
-    width: 200px;
+    height: 100%;
+    width: 30%;
     border: 1px solid black;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
+    display: grid;
+    /* row-gap: 10px; */
+    grid-template-rows: 3;
 }
-section div.gameDisplay div.display img{
-    min-width: 150px;
-    max-width: 100%;
-    min-height: 150px;
-    max-height: 100%;
+section > div.gameDisplay > div.display > div.subDisplay{
+    height: 100%;
+    margin: auto;
+}
+section > div.gameDisplay > div.display > div.mainDisplay{
+    border: 1px solid black;
+    height: 100%;
+    grid-row: 2;
+    margin: auto;
+}
+section > div.gameDisplay > div.display > div.displaySub1{
+    border: 1px solid black;
+    grid-row: 1;
+}
+section > div.gameDisplay > div.display > div.displaySub2{
+    grid-row: 3;
+    border:1px solid black;
+}
+section > div.gameDisplay > div.display > div.mainDisplay > img{
+    content: url("img/1.png");
+    height: 120px;
+}
+section > div.gameDisplay > div.display > div.subDisplay > img{
+    content: url("img/0.png");
+    height: 75px;
 }
 section > div.status{
     min-height: 100px;
