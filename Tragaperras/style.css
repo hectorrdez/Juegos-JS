@@ -90,24 +90,23 @@ section > div.gameDisplay > div.display > div.displaySub1{
     grid-row: 1;
     background: -prefix-linear-gradient(to bottom, black, white);
     background: linear-gradient(to bottom, black, white);
-    transform: rotateX(45deg);
 }
 section > div.gameDisplay > div.display > div.displaySub2{
     grid-row: 3;
     background: -prefix-linear-gradient(to top, black, white);
     background: linear-gradient(to top, black, white);
-    transform: rotateX(45deg);
     /* transform: skew(-10deg,0deg); */
     /* border:1px solid black; */
 }
 section > div.gameDisplay > div.display > div.mainDisplay > img{
     /* content: url("img/1.png"); */
-    height: 120px;
+    height: 110px;
 }
 section > div.gameDisplay > div.display > div.subDisplay > img{
     /* content: url("img/0.png"); */
     height: 90px;
     opacity: 0.5;
+    transform: rotateX(45deg);
 }
 .blur{
     filter: blur(0.1em);
@@ -136,6 +135,9 @@ section > div.status > div.money > img{
 }
 section > div.status button{
     transform: rotate(90deg);
+    height: 100px;
+    width: 100px;
+    font-size: large;
 }
 footer{
     min-height: 200px;

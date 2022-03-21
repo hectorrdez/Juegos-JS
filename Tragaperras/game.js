@@ -6,6 +6,24 @@ let moneyCount = Array(6);
 let moneyText = money.toString();
 let times = moneyCount.length - moneyText.length;
 
+let audioOpt = true;
+let ambience = document.querySelector("#ambience");
+let ambienceBt = document.querySelector(".sound");
+
+ambienceBt.onclick = changeAmbience;
+
+function changeAmbience() {
+    if (audioOpt == true) {
+        ambience.pause();
+        audioOpt = false;
+        ambienceBt.classList.remove("activated");
+    } else {
+        ambience.play();
+        audioOpt = true;
+        ambienceBt.classList.add("activated");
+    }
+}
+
 if (times > 0) {
     for (let i = 0; i < times; i++) {
         moneyCount[i] = "0";
@@ -18,49 +36,99 @@ if (times > 0) {
 for (let i = 0; i < moneyCount.length; i++) {
     moneyCounter[i].src = `img/7seg/${moneyCount[i]}.png`;
 }
-
-//ESTO SOLO FUNCIONA CON UNA IMAGEN POR DIV
 let display = [document.querySelectorAll('.display1 img'), document.querySelectorAll('.display2 img'), document.querySelectorAll('.display3 img')];
-let index = [[0,0,0], [0,0,0], [0,0,0]];
-let timer0 = setInterval(changeImg, 80);
+let index = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+let timer0,timer1,timer2;
 
-for (i = 0; i < 3; i++) {
-    index[i][0] = parseInt(Math.random() * 15);
-    display[i][0].src = "img/" + index[i][0] + ".png";
+let tiradaBt = document.querySelector(".pulse");
+tiradaBt.onclick = tirada;
+
+let effects = document.querySelector("#effects");
+
+function tirada() {
+    display[0][1].classList.add("blur");
+    display[1][1].classList.add("blur");
+    display[2][1].classList.add("blur");
+    
+    effects.play();
+
+    let interval0 = (parseInt(Math.random() * 100) + 30);
+    let interval1 = (parseInt(Math.random() * 100) + 30);
+    let interval2 = (parseInt(Math.random() * 100) + 30);
+
+    timer0 = setInterval(changeImg0, interval0);
+    timer1 = setInterval(changeImg1, interval1);
+    timer2 = setInterval(changeImg2, interval2);
+
+    let timeout0 = (parseInt(Math.random() * 6) + 5) * 1000;
+    let timeout1 = timeout0 * 1.25;
+    let timeout2 = timeout0 * 1.5;
+
+    let contador0 = setTimeout(freno0, timeout0);
+    let contador1 = setTimeout(freno1, timeout1);
+    let contador2 = setTimeout(freno2, timeout2);
+
+    for (i = 0; i < 3; i++) {
+        index[i][0] = parseInt(Math.random() * 15);
+        display[i][0].src = "img/" + index[i][0] + ".png";
+    }
 }
 
-function changeImg() {
+function changeImg0() {
+    if ((index[0][0] + 1) < 15) {
+        index[0][2] = index[0][1];
+        index[0][1] = index[0][0];
+        index[0][0]++;
+    }
+    else index[0][0] = 0;
     for (i = 0; i < 3; i++) {
-        if ((index[i][0] + 1) < 15) {
-            index[i][2]=index[i][1];
-            index[i][1]=index[i][0];
-            index[i][0]++;
-        }
-        else index[i][0] = 0;
         for (j = 0; j < 3; j++) {
             display[i][j].src = "img/" + index[i][j] + ".png";
         }
     }
+}
+function changeImg1() {
+    if ((index[1][0] + 1) < 15) {
+        index[1][2] = index[1][1];
+        index[1][1] = index[1][0];
+        index[1][0]++;
+    }
+    else index[1][0] = 0;
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            display[i][j].src = "img/" + index[i][j] + ".png";
+        }
+    }
+}
+function changeImg2() {
+    if ((index[2][0] + 1) < 15) {
+        index[2][2] = index[2][1];
+        index[2][1] = index[2][0];
+        index[2][0]++;
+    }
+    else index[2][0] = 0;
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            display[i][j].src = "img/" + index[i][j] + ".png";
+        }
+    }
+}
 
-
-
-    // for (i = 0; i < 3; i++) {
-    //     if (index[0][i] + 1 < 15) index[0][i]++;
-    //     else index[0][i] = 0;
-    //     display[0][i].src = "img/" + index[0][i] + ".png";
-        // for (j = 1; j < 3; j++) {
-        //     index[i][j] = index[i - 1][j];
-        //     display[i][j].src = "img/" + index[i][j] + ".png";
-        // }
-    //}
-    // for (i = 0; i < img.length; i++) {
-    //     index[i]++;
-    //     if (index[i] > 15) index[i] = 0;
-    //     // let player = img[i].animate([
-    //     //     {transform: 'translate(0, -100px)'},
-    //     //     {transform: 'translate(0, 250px)'}
-    //     //   ], 300);
-    //     //let player = img[i].animate([{ transform: "translate(0px, 50px)" }], 150);
-    //     img[i].src = "img/" + index[i] + ".png";
-    // }
+function freno0() {
+    clearInterval(timer0);
+    for (i = 0; i < 3; i++) {
+        display[0][i].classList.remove('blur');
+    }
+}
+function freno1() {
+    clearInterval(timer1);
+    for (i = 0; i < 3; i++) {
+        display[1][i].classList.remove('blur');
+    }
+}
+function freno2() {
+    clearInterval(timer2);
+    for (i = 0; i < 3; i++) {
+        display[2][i].classList.remove('blur');
+    }
 }
